@@ -72,4 +72,16 @@ const uniqueNumbers = [...new Set(numbers)];
 console.log(uniqueNumbers); // [ 1, 2, 4, 5, 6, 3 ]
 
 const uniqueColors = [...new Set(colors)];
-console.log(uniqueColors); // [ 'blue', 'white', 'orange', 'red', 'yellow' ]
+
+// 7. Use spread operator to shallow copy arrays and objects
+
+const scores = [10, 40, 56, 90];
+const employee2 = { id: 1, name: "Gururaj" };
+const employee2Ref = employee2;
+const newScores = [...scores];
+const newEmployee2 = { ...employee2 };
+
+console.log(newScores); // [ 10, 40, 56, 90 ]
+console.log(newEmployee2); // { id: 1, name: 'Gururaj' }
+console.log(newEmployee2 === employee2) // false (created new shallow copy) 
+console.log(employee2Ref === employee2) // true (referring same object)
