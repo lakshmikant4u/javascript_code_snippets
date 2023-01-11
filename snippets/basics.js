@@ -133,4 +133,10 @@ const assets2 = [
 ]
 
 const hasVideoAsset = assets2.some(asset => asset.type === "video");
-console.log(hasVideoAsset); // true
+// 11. Readable numbers
+
+const largeNumber = 35_00_00_000;
+console.log(largeNumber); // 350000000
+
+const largeNumber2 = 65e8;
+console.log(largeNumber2); // 6500000000
