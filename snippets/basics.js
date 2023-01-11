@@ -82,7 +82,13 @@ const employee2Ref = employee2;
 const newScores = [...scores];
 const newEmployee2 = { ...employee2 };
 
-console.log(newScores); // [ 10, 40, 56, 90 ]
-console.log(newEmployee2); // { id: 1, name: 'Gururaj' }
-console.log(newEmployee2 === employee2) // false (created new shallow copy) 
-console.log(employee2Ref === employee2) // true (referring same object)
+// 8. Avoid delete keyword rather use spread operator to create new object
+
+const employee3 = {
+    id: 3,
+    name: "Sachin",
+    salary: "2000000"
+}
+
+const { salary, ...employee4 } = employee3;
+console.log(employee4); // { id: 3, name: 'Sachin' }
