@@ -8,7 +8,7 @@ const assets = [
 ]
 
 const videos = assets.filter(asset => asset.type === "video");
-// console.log(videos)
+console.log(videos)
 
 // 2. Loose Equality Operators
 
@@ -33,3 +33,17 @@ console.log(0 === false); // false
 console.log(null == undefined); // true
 console.log(null === undefined); // false
 
+// 3. Check if property exist in Object
+
+const student = {
+    id: 1,
+    age: 12,
+    standard: 6,
+    name: "Raju"
+};
+
+const isAgeExist = 'age' in student;
+console.log(isAgeExist); // true
+
+const isGenderExist = 'gender' in student;
+console.log(isGenderExist); // false
