@@ -69,7 +69,7 @@ const numbers = [1, 2, 4, 5, 6, 3, 4, 5, 2, 3];
 const colors = ["blue", "white", "orange", "red", "yellow", "white", "orange"];
 
 const uniqueNumbers = [...new Set(numbers)];
-console.log(uniqueNumbers);
+console.log(uniqueNumbers); // [ 1, 2, 4, 5, 6, 3 ]
 
 const uniqueColors = [...new Set(colors)];
-console.log(uniqueColors);
+console.log(uniqueColors); // [ 'blue', 'white', 'orange', 'red', 'yellow' ]
