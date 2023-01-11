@@ -72,6 +72,7 @@ const uniqueNumbers = [...new Set(numbers)];
 console.log(uniqueNumbers); // [ 1, 2, 4, 5, 6, 3 ]
 
 const uniqueColors = [...new Set(colors)];
+console.log(uniqueColors); // [ 'blue', 'white', 'orange', 'red', 'yellow' ]
 
 // 7. Use spread operator to shallow copy arrays and objects
 
