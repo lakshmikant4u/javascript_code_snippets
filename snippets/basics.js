@@ -105,4 +105,13 @@ const employee3 = {
 const { salary, ...employee4 } = employee3;
 // console.log(employee4); // { id: 3, name: 'Sachin' }
 
-// 9. Use Array.isArray to determine the array
+// 9. Use Array.isArray to determine the array 
+
+let names = ["Lakshmikant", "Sanjay", "Ganesh", "Sachin"];
+console.log(Array.isArray(names)); // true
+
+let user = { id: 1, name: "Prasad" };
+console.log(Array.isArray(user)); // false
+
+let name = "Coder";
+console.log(Array.isArray(name)); // false
