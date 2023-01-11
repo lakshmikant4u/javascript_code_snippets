@@ -125,4 +125,12 @@ const namesWithFalsyValues = ["Ramesh", null, "Krishna", "Pandu", false, NaN, "G
 const names2 = namesWithFalsyValues.filter(Boolean);
 console.log(names2) // [ 'Ramesh', 'Krishna', 'Pandu', 'Giridhar' ]
 
+// 10. Use Array.some to check occurrence in array
 
+const assets2 = [
+    { course: "LLD of Splitwise", type: "video", link: "https://youtu.be/I4xf4STXgmU" },
+    { course: "LLD of Parking", type: "blog", link: "https://medium.com/@abhigulve06/parking-lot-low-level-design-in-java-2be46101daec" }
+]
+
+const hasVideoAsset = assets2.some(asset => asset.type === "video");
+console.log(hasVideoAsset); // true
