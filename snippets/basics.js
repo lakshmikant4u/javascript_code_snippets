@@ -63,5 +63,13 @@ const isRGBcolor = (color) => {
     return rgbColors.includes(color)
 }
 
-console.log(isRGBcolor("red")) // true
-console.log(isRGBcolor("white")) // false
+// 6. Remove duplicates from Array using Set
+
+const numbers = [1, 2, 4, 5, 6, 3, 4, 5, 2, 3];
+const colors = ["blue", "white", "orange", "red", "yellow", "white", "orange"];
+
+const uniqueNumbers = [...new Set(numbers)];
+console.log(uniqueNumbers);
+
+const uniqueColors = [...new Set(colors)];
+console.log(uniqueColors);
