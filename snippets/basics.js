@@ -46,4 +46,14 @@ const isAgeExist = 'age' in student;
 console.log(isAgeExist); // true
 
 const isGenderExist = 'gender' in student;
-console.log(isGenderExist); // false
+// 4. Conditionally add a property to an Object
+
+const includeSalary = true;
+
+const employee = {
+    id: 1,
+    name: "Shrihari",
+    ...(includeSalary && { salary: 100000 })
+}
+
+console.log(employee); // { id: 1, name: 'Shrihari', salary: 100000 }
