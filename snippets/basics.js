@@ -56,4 +56,12 @@ const employee = {
     ...(includeSalary && { salary: 100000 })
 }
 
-console.log(employee); // { id: 1, name: 'Shrihari', salary: 100000 }
+// 5. Use Array includes method to check for multiple criteria
+
+const rgbColors = ["red", "green", "blue"];
+const isRGBcolor = (color) => {
+    return rgbColors.includes(color)
+}
+
+console.log(isRGBcolor("red")) // true
+console.log(isRGBcolor("white")) // false
