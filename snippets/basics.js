@@ -140,3 +140,13 @@ console.log(largeNumber); // 350000000
 
 const largeNumber2 = 65e8;
 console.log(largeNumber2); // 6500000000
+
+// 12. Pass function arguments as an object
+
+const createProduct = ({ name, price, brand }) => {
+    console.log(`${brand} ${name} comes with price ${price} `)
+}
+
+createProduct({ name: "Boat Tail", price: "$28.0 Million", brand: "Rolls-Royce" }); // Rolls-Royce Boat Tail comes with price $28.0 Million 
+createProduct({ name: "La Voiture Noire", price: "$13.4 Million", brand: "Bugatti" }); // Bugatti La Voiture Noire comes with price $13.4 Million 
+createProduct({ name: "Sweptail", price: "$12.8 Million", brand: "Rolls-Royce" }); // Rolls-Royce Sweptail comes with price $12.8 Million 
