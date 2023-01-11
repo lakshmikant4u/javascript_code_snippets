@@ -114,4 +114,15 @@ let user = { id: 1, name: "Prasad" };
 console.log(Array.isArray(user)); // false
 
 let name = "Coder";
-console.log(Array.isArray(name)); // false
+// 9. Use of falsy bouncer A falsy value is a value that is considered false when examined as a Boolean. Falsy Bouncer means removing all falsy values from an array. 
+// Falsy values in JavaScript are false, null, 0, undefined, NaN, and ""(empty string).
+
+const numbersWithFalsyValues = [7, null, 8, 13, false, NaN];
+const numbers2 = numbersWithFalsyValues.filter(Boolean);
+console.log(numbers2) // [ 7, 8, 13 ]
+
+const namesWithFalsyValues = ["Ramesh", null, "Krishna", "Pandu", false, NaN, "Giridhar", undefined];
+const names2 = namesWithFalsyValues.filter(Boolean);
+console.log(names2) // [ 'Ramesh', 'Krishna', 'Pandu', 'Giridhar' ]
+
+
