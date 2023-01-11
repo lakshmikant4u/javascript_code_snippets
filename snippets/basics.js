@@ -108,22 +108,24 @@ const { salary, ...employee4 } = employee3;
 // 9. Use Array.isArray to determine the array 
 
 let names = ["Lakshmikant", "Sanjay", "Ganesh", "Sachin"];
-console.log(Array.isArray(names)); // true
+// console.log(Array.isArray(names)); // true
 
 let user = { id: 1, name: "Prasad" };
-console.log(Array.isArray(user)); // false
+// console.log(Array.isArray(user)); // false
 
 let name = "Coder";
+// console.log(Array.isArray(name)); // false
+
 // 9. Use of falsy bouncer A falsy value is a value that is considered false when examined as a Boolean. Falsy Bouncer means removing all falsy values from an array. 
 // Falsy values in JavaScript are false, null, 0, undefined, NaN, and ""(empty string).
 
 const numbersWithFalsyValues = [7, null, 8, 13, false, NaN];
 const numbers2 = numbersWithFalsyValues.filter(Boolean);
-console.log(numbers2) // [ 7, 8, 13 ]
+// console.log(numbers2) // [ 7, 8, 13 ]
 
 const namesWithFalsyValues = ["Ramesh", null, "Krishna", "Pandu", false, NaN, "Giridhar", undefined];
 const names2 = namesWithFalsyValues.filter(Boolean);
-console.log(names2) // [ 'Ramesh', 'Krishna', 'Pandu', 'Giridhar' ]
+// console.log(names2) // [ 'Ramesh', 'Krishna', 'Pandu', 'Giridhar' ]
 
 // 10. Use Array.some to check occurrence in array
 
@@ -133,13 +135,15 @@ const assets2 = [
 ]
 
 const hasVideoAsset = assets2.some(asset => asset.type === "video");
+// console.log(hasVideoAsset); // true
+
 // 11. Readable numbers
 
 const largeNumber = 35_00_00_000;
-console.log(largeNumber); // 350000000
+// console.log(largeNumber); // 350000000
 
 const largeNumber2 = 65e8;
-console.log(largeNumber2); // 6500000000
+// console.log(largeNumber2); // 6500000000
 
 // 12. Pass function arguments as an object
 
@@ -147,11 +151,21 @@ const createProduct = ({ name, price, brand }) => {
     console.log(`${brand} ${name} comes with price ${price} `)
 }
 
+// createProduct({ name: "Boat Tail", price: "$28.0 Million", brand: "Rolls-Royce" }); // Rolls-Royce Boat Tail comes with price $28.0 Million 
+// createProduct({ name: "La Voiture Noire", price: "$13.4 Million", brand: "Bugatti" }); // Bugatti La Voiture Noire comes with price $13.4 Million 
+// createProduct({ name: "Sweptail", price: "$12.8 Million", brand: "Rolls-Royce" }); // Rolls-Royce Sweptail comes with price $12.8 Million 
+
 // 13. Object destructuring on arrays
 
 const employees = [{ name: "Lakshmikant", empId: 1 }, { name: "Dixit", empId: 2 },]
 
 const { 0: emp1, 1: emp2 } = employees;
 
-console.log(emp1) // { name: 'Lakshmikant', empId: 1 }
-console.log(emp2) // { name: 'Dixit', empId: 2 }
+// console.log(emp1) // { name: 'Lakshmikant', empId: 1 }
+// console.log(emp2) // { name: 'Dixit', empId: 2 }
+
+// 14. Skip values in array destructuring
+
+const scores2 = [25, 35, 45, 55, 67, 57];
+const [, , ...remscores] = scores2;
+console.log(remscores) // [ 45, 55, 67, 57 ]
