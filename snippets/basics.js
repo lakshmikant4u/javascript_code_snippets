@@ -147,6 +147,11 @@ const createProduct = ({ name, price, brand }) => {
     console.log(`${brand} ${name} comes with price ${price} `)
 }
 
-createProduct({ name: "Boat Tail", price: "$28.0 Million", brand: "Rolls-Royce" }); // Rolls-Royce Boat Tail comes with price $28.0 Million 
-createProduct({ name: "La Voiture Noire", price: "$13.4 Million", brand: "Bugatti" }); // Bugatti La Voiture Noire comes with price $13.4 Million 
-createProduct({ name: "Sweptail", price: "$12.8 Million", brand: "Rolls-Royce" }); // Rolls-Royce Sweptail comes with price $12.8 Million 
+// 13. Object destructuring on arrays
+
+const employees = [{ name: "Lakshmikant", empId: 1 }, { name: "Dixit", empId: 2 },]
+
+const { 0: emp1, 1: emp2 } = employees;
+
+console.log(emp1) // { name: 'Lakshmikant', empId: 1 }
+console.log(emp2) // { name: 'Dixit', empId: 2 }
