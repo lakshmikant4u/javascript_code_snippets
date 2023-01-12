@@ -183,3 +183,11 @@ console.log(JSON.stringify(dev, null, 2))
 //   "city": "Hubballi",
 //   "role": "Dev"
 // }
+
+// 16. Filter with JSON.stringify
+
+const dev2 = { id: 2, name: "Sanjay", city: "Dharwad", role: "Dev", hobbies: ["Reading", "Cricket", "Movies"] };
+console.log(dev2) // { id: 2, name: 'Sanjay', city: 'Dharwad', role: 'Dev', hobbies: ['Reading', 'Cricket', 'Movies']}
+
+const filters = ["name", "city", "role"];
+console.log(JSON.stringify(dev2, filters)) // {"name":"Sanjay","city":"Dharwad","role":"Dev"}
