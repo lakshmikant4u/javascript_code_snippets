@@ -168,4 +168,16 @@ const { 0: emp1, 1: emp2 } = employees;
 
 const scores2 = [25, 35, 45, 55, 67, 57];
 const [, , ...remscores] = scores2;
-console.log(remscores) // [ 45, 55, 67, 57 ]
+// 15. Format the output of JSON.stringify
+
+const dev = { id: 1, name: "Lakshmikant", city: "Hubballi", role: "Dev" };
+
+console.log(dev) // { id: 1, name: 'Lakshmikant', city: 'Hubballi', role: 'Dev' }
+console.log(JSON.stringify(dev)) // {"id":1,"name":"Lakshmikant","city":"Hubballi","role":"Dev"}
+console.log(JSON.stringify(dev, null, 2))
+// {
+//   "id": 1,
+//   "name": "Lakshmikant",
+//   "city": "Hubballi",
+//   "role": "Dev"
+// }
