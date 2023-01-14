@@ -202,4 +202,15 @@ let someFunction;
 console.log(someFunction?.()); // undefined
 
 const testFunction = () => { console.log("Test Function") }
-testFunction?.(); // Test Function
+// 19. Convert to a flat array using Array.flat
+
+const numArr = [[2, 3, 4], 6, 7, [[8, 9]]];
+
+const flatWithoutDepth = numArr.flat();
+console.log(flatWithoutDepth) // [ 2, 3, 4, 6, 7, [ 8, 9 ] ]
+
+const flatWithoutDepth1 = numArr.flat(1);
+console.log(flatWithoutDepth1) // [ 2, 3, 4, 6, 7, [ 8, 9 ] ]
+
+const flatWithoutDepth2 = numArr.flat(2);
+console.log(flatWithoutDepth2) // [ 2, 3, 4, 6, 7, 8, 9 ]
