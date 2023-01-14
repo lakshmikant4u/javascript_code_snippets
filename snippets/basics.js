@@ -213,4 +213,15 @@ const flatWithoutDepth1 = numArr.flat(1);
 console.log(flatWithoutDepth1) // [ 2, 3, 4, 6, 7, [ 8, 9 ] ]
 
 const flatWithoutDepth2 = numArr.flat(2);
-console.log(flatWithoutDepth2) // [ 2, 3, 4, 6, 7, 8, 9 ]
+// 20. Use console.time to debug performance
+
+const label = "ForLoop";
+console.time(label);
+
+const list = [];
+for (let i = 0; i < 250000; i++) {
+    list.push(i);
+}
+
+console.log(`list.length ${list.length}`); // list.length 250000
+console.timeEnd(label); // ForLoop: 50.235ms
