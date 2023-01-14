@@ -195,5 +195,11 @@ const filters = ["name", "city", "role"];
 const neoEmp = { name: "Lakshmikant", designation: "Solutions Architect", id: 100, salary: 50000 }
 
 const doubleSalary = (key, value) => { return key == "salary" ? value * 2 : value }
-console.log(JSON.stringify(neoEmp)) // {"name":"Lakshmikant","designation":"Solutions Architect","id":100,"salary":50000}
-console.log(JSON.stringify(neoEmp, doubleSalary)); // {"name":"Lakshmikant","designation":"Solutions Architect","id":100,"salary":100000}
+
+// 18. Use of optional chaining on function call
+
+let someFunction;
+console.log(someFunction?.()); // undefined
+
+const testFunction = () => { console.log("Test Function") }
+testFunction?.(); // Test Function
