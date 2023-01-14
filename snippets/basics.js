@@ -190,4 +190,10 @@ const dev2 = { id: 2, name: "Sanjay", city: "Dharwad", role: "Dev", hobbies: ["R
 console.log(dev2) // { id: 2, name: 'Sanjay', city: 'Dharwad', role: 'Dev', hobbies: ['Reading', 'Cricket', 'Movies']}
 
 const filters = ["name", "city", "role"];
-console.log(JSON.stringify(dev2, filters)) // {"name":"Sanjay","city":"Dharwad","role":"Dev"}
+// 17. Power of JSON.stringify replacer parameter
+
+const neoEmp = { name: "Lakshmikant", designation: "Solutions Architect", id: 100, salary: 50000 }
+
+const doubleSalary = (key, value) => { return key == "salary" ? value * 2 : value }
+console.log(JSON.stringify(neoEmp)) // {"name":"Lakshmikant","designation":"Solutions Architect","id":100,"salary":50000}
+console.log(JSON.stringify(neoEmp, doubleSalary)); // {"name":"Lakshmikant","designation":"Solutions Architect","id":100,"salary":100000}
