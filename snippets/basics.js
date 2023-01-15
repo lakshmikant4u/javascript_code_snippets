@@ -320,3 +320,17 @@ class UserService { }
 // Import class
 
 // import { UserService } from './' // user service locn
+
+// 26. Use of object destructuring
+
+const emp3 = { name1: "Bhargav", id1: 5 }
+const { id1, name1 } = emp3;
+
+console.log(id1, name1);
+
+const emp5 = { name2: "Bhagat", id2: 6 }
+let id2, name2;
+
+
+({ id2, name2 } = emp5)
+console.log(id2, name2);
