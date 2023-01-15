@@ -227,3 +227,19 @@ for (let i = 0; i < 250000; i++) {
 
 console.log(`list.length ${list.length}`); // list.length 250000
 console.timeEnd(label); // ForLoop: 50.235ms
+
+// 21. Logging using console.group
+
+console.group("Video");
+
+console.log("Video uploaded..")
+console.log("Video validated..")
+console.log("Video published..")
+
+console.groupEnd()
+
+// Video 
+//   Video uploaded..
+//   Video validated..
+//   Video published..
+
