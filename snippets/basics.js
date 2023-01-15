@@ -249,3 +249,34 @@ const neoEmp2 = { name: "Aravind", id: 2 };
 
 console.assert(neoEmp2.salary, "Salary not defined"); // Assertion failed: Salary not defined
 
+// 23. Display tabular data using console.table
+
+console.table(neoEmp2);
+
+// ┌─────────┬───────────┐
+// │ (index) │  Values   │
+// ├─────────┼───────────┤
+// │  name   │ 'Aravind' │
+// │   id    │     2     │
+// └─────────┴───────────┘
+
+
+console.table(["Developer", "Tester", "Product Owner"]);
+
+// ┌─────────┬─────────────────┐
+// │ (index) │     Values      │
+// ├─────────┼─────────────────┤
+// │    0    │   'Developer'   │
+// │    1    │    'Tester'     │
+// │    2    │ 'Product Owner' │
+// └─────────┴─────────────────┘
+
+console.table(employees)
+
+// ┌─────────┬───────────────┬───────┐
+// │ (index) │     name      │ empId │
+// ├─────────┼───────────────┼───────┤
+// │    0    │ 'Lakshmikant' │   1   │
+// │    1    │    'Dixit'    │   2   │
+// └─────────┴───────────────┴───────┘
+
