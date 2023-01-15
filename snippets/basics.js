@@ -243,3 +243,9 @@ console.groupEnd()
 //   Video validated..
 //   Video published..
 
+// 22. Conditional log message using console.assert
+
+const neoEmp2 = { name: "Aravind", id: 2 };
+
+console.assert(neoEmp2.salary, "Salary not defined"); // Assertion failed: Salary not defined
+
