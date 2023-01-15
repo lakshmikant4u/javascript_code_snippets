@@ -280,3 +280,23 @@ console.table(employees)
 // │    1    │    'Dixit'    │   2   │
 // └─────────┴───────────────┴───────┘
 
+// 24. Default assignment for required arguments of the function
+
+const isRequired = () => {
+    throw new Error("Argument is required");
+}
+
+const setCurrentVideoCode = (videoCode = isRequired()) => {
+    console.log(videoCode);
+}
+try {
+    setCurrentVideoCode() // Error: Argument is required
+} catch (error) {
+    console.error(error.message)
+}
+setCurrentVideoCode("Swami Vivekananda Speech") // Swami Vivekananda Speech
+
+setCurrentVideoCode("") // 
+
+setCurrentVideoCode(null) // null
+
