@@ -300,3 +300,23 @@ setCurrentVideoCode("") //
 
 setCurrentVideoCode(null) // null
 
+
+// 25. Avoid default exports
+// Problems with default exports are:
+// • Discoverability is very poor for default exports.
+// • Difficult to analyze by automated tools or provide code autocompletion.
+// • Horrible experience for CommonJS.
+// • TypeScript auto -import struggles.
+// • Default exports make large - scale refactoring impossible
+
+// Export class
+
+class UserService { }
+
+// export { UserService }
+
+// export default UserService; // avoid using this 
+
+// Import class
+
+// import { UserService } from './' // user service locn
