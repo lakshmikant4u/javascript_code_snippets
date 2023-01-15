@@ -213,6 +213,8 @@ const flatWithoutDepth1 = numArr.flat(1);
 console.log(flatWithoutDepth1) // [ 2, 3, 4, 6, 7, [ 8, 9 ] ]
 
 const flatWithoutDepth2 = numArr.flat(2);
+console.log(flatWithoutDepth2) // [ 2, 3, 4, 6, 7, 8, 9 ]
+
 // 20. Use console.time to debug performance
 
 const label = "ForLoop";
