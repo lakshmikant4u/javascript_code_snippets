@@ -367,10 +367,15 @@ innerFunc(); // This is in outer func scope
 
 // 29. Smooth scroll to a specific element
 
-const element = document.getElementById("scrollId");
+// 30. Use Object.entries to access key and value
 
-element.scrollIntoView({
-    behavior: "smooth",
-    block: "center",
-    inline: "nearest",
+const emp7 = {
+    name: "Akshay",
+    id: 7
+}
+
+Object.entries(emp7).forEach(([key, value]) => {
+    console.log(`key : ${key} value : ${value}`);
 })
+// key: name value: Akshay
+// key: id value: 7
