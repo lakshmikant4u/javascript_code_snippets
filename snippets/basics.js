@@ -333,4 +333,16 @@ let id2, name2;
 
 
 ({ id2, name2 } = emp5)
-console.log(id2, name2);
+// 27. Lock an object using the Object.freeze
+
+const emp6 = {
+    name: "Vishnu",
+    id: 6
+}
+
+Object.freeze(emp6);
+
+emp6.name = "Raj"; // Throws error when "use strict" is used
+
+console.log(emp6.name) // Vishnu - it is not modified above as the object was freezed
+
