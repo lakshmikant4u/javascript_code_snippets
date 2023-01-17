@@ -388,4 +388,24 @@ let num2;
 let defaultNum1 = num1 ?? 1;
 let defaultNum2 = num2 ?? 2;
 
-console.log(`defaultNum1 : ${defaultNum1} defaultNum2 : ${defaultNum2}`) // defaultNum1 : 0 defaultNum2 : 2
+// 32. Ways of a function declaration
+
+// Function Declaration
+function getVideo(videoId) {
+    return { id: videoId, title: `Video-${videoId}` }
+}
+
+// Function Expression
+const getVideo2 = function (videoId) {
+    return { id: videoId, title: `Video-${videoId}` }
+}
+
+// Arrow => Function
+const getVideo3 = (videoId) => {
+    return { id: videoId, title: `Video-${videoId}` }
+}
+
+// Arrow => Function withou curly braces
+const getVideo4 = videoId => ({ id: videoId, title: `Video-${videoId}` })
+const getModulusOfTen = value => value % 10;
+
