@@ -388,6 +388,8 @@ let num2;
 let defaultNum1 = num1 ?? 1;
 let defaultNum2 = num2 ?? 2;
 
+console.log(`defaultNum1 : ${defaultNum1} defaultNum2 : ${defaultNum2}`) // defaultNum1 : 0 defaultNum2 : 2
+
 // 32. Ways of a function declaration
 
 // Function Declaration
