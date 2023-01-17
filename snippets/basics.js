@@ -344,5 +344,23 @@ Object.freeze(emp6);
 
 emp6.name = "Raj"; // Throws error when "use strict" is used
 
-console.log(emp6.name) // Vishnu - it is not modified above as the object was freezed
+// 28. Understanding of closures
 
+// A closure is a mechanism that allows the inner function to remember the outer scope variables when it was defined,
+//     even after the outer function has returned.
+// The closure has three scope chains:
+//     • It can access its own scope means variables
+//     defined between its curly brackets({}).
+//     • It can access the outer function’s variables.
+//     • It can access the global variables.
+
+const outer = () => {
+    let message = "This is in outer func scope";
+    const inner = () => {
+        console.log(message);
+    }
+    return inner;
+}
+
+let innerFunc = outer();
+innerFunc(); // This is in outer func scope
