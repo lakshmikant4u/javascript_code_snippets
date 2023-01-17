@@ -379,3 +379,13 @@ Object.entries(emp7).forEach(([key, value]) => {
 })
 // key: name value: Akshay
 // key: id value: 7
+
+// 31. Use of nullish coalescing operator with numbers
+
+let num1 = 0;
+let num2;
+
+let defaultNum1 = num1 ?? 1;
+let defaultNum2 = num2 ?? 2;
+
+console.log(`defaultNum1 : ${defaultNum1} defaultNum2 : ${defaultNum2}`) // defaultNum1 : 0 defaultNum2 : 2
