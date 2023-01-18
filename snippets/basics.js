@@ -411,3 +411,14 @@ const getVideo3 = (videoId) => {
 const getVideo4 = videoId => ({ id: videoId, title: `Video-${videoId}` })
 const getModulusOfTen = value => value % 10;
 
+// 33. Destructuring Object - 2
+
+const person = {
+    firstName: "Lakshmikant",
+    lastName: "D",
+    age: 30,
+    sex: "M"
+}
+
+const { firstName: first, age, city = "Bengaluru" } = person;
+console.log(`${first} ${age} ${city} `) // Lakshmikant 30 Bengaluru 
