@@ -433,4 +433,10 @@ function myFunc(x, y, ...params) {
     console.log(`x : ${x}, y : ${y}, params : ${params}`); // x : a, y : b, params : c,d,e,f
 }
 
-myFunc("a", "b", "c", "d", "e", "f")
+const { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+console.log(x); // 1
+console.log(y); // 2
+console.log(z); // { a: 3, b: 4 }
+
+const n = { x, y, ...z };
+console.log(n); // { x: 1, y: 2, a: 3, b: 4 }
