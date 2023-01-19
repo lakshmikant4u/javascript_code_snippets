@@ -428,3 +428,9 @@ const { firstName: first, age, city = "Bengaluru" } = person;
 const arr1 = ["a", "b", "c"];
 const arr2 = [...arr1, "d", "e", "f"];
 console.log(arr2); // [ 'a', 'b', 'c', 'd', 'e', 'f' ]
+
+function myFunc(x, y, ...params) {
+    console.log(`x : ${x}, y : ${y}, params : ${params}`); // x : a, y : b, params : c,d,e,f
+}
+
+myFunc("a", "b", "c", "d", "e", "f")
