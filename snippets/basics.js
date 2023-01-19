@@ -426,7 +426,8 @@ function joinFirstLastName({ firstName, lastName }) { // we create firstName and
     return firstName + '-' + lastName;
 }
 
-console.log(joinFirstLastName(person)); // Lakshmikant-D
+const joinFirstLastName2 = ({ firstName, lastName }) => firstName + '-' + lastName;
+console.log(joinFirstLastName2(person)); // Lakshmikant-D
 
 // 34. Spread operator "..."
 // The spread operator ... has been introduced with ES2015 and is used to expand elements of an iterable(like an array)
