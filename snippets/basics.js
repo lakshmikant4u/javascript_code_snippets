@@ -421,4 +421,10 @@ const person = {
 }
 
 const { firstName: first, age, city = "Bengaluru" } = person;
-console.log(`${first} ${age} ${city} `) // Lakshmikant 30 Bengaluru 
+// 34. Spread operator "..."
+// The spread operator ... has been introduced with ES2015 and is used to expand elements of an iterable(like an array)
+// into places where multiple elements can fit.
+
+const arr1 = ["a", "b", "c"];
+const arr2 = [...arr1, "d", "e", "f"];
+console.log(arr2); // [ 'a', 'b', 'c', 'd', 'e', 'f' ]
