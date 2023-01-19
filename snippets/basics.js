@@ -421,6 +421,13 @@ const person = {
 }
 
 const { firstName: first, age, city = "Bengaluru" } = person;
+
+function joinFirstLastName({ firstName, lastName }) { // we create firstName and lastName variables by destructuring person parameter
+    return firstName + '-' + lastName;
+}
+
+console.log(joinFirstLastName(person)); // Lakshmikant-D
+
 // 34. Spread operator "..."
 // The spread operator ... has been introduced with ES2015 and is used to expand elements of an iterable(like an array)
 // into places where multiple elements can fit.
