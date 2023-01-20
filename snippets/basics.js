@@ -499,4 +499,4 @@ let eveLoop = () => {
     console.log(4);
 };
 
-eveLoop();
+eveLoop(); // 1 4 3 2 
