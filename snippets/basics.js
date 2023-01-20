@@ -499,4 +499,23 @@ let eveLoop = () => {
     console.log(4);
 };
 
-eveLoop(); // 1 4 3 2 
+// 40. function to check if String is Palindrome
+// Regex ref - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+
+// \W means "non-word" - The RegExp \W Metacharacter in JavaScript is used to find the nonword character 
+// i.e. characters which are not from a to z, A to Z, 0 to 9. It is the same as [^a-zA-Z0-9]. 
+// https://www.geeksforgeeks.org/javascript-regexp-w-metacharacter/
+
+// / mark the beginning and end of a regular expression.
+// g means it's a global search.
+// https://www.programiz.com/javascript/regex
+
+let isPalindrome = (str) => {
+    str = str.replace(/\W/g, '').toLowerCase();
+    return (str == str.split('').reverse().join(''));
+}
+
+console.log(isPalindrome("level"));                   // logs 'true'
+console.log(isPalindrome("levels"));                  // logs 'false'
+console.log(isPalindrome("A car, a man, a maraca"));  // logs 'true'
+
