@@ -447,4 +447,16 @@ console.log(y); // 2
 console.log(z); // { a: 3, b: 4 }
 
 const n = { x, y, ...z };
-console.log(n); // { x: 1, y: 2, a: 3, b: 4 }
+// 35. A reliable way of checking if variable is an object
+
+let game = null;
+console.log(typeof game === "object");  // logs true! the surprising gotcha in JavaScript is that null is also considered an object!
+
+console.log((game !== null) && (typeof game === "object"));  // logs false hence can add null check to see if variable is an object!
+
+console.log((game !== null) && ((typeof game === "object") || (typeof game === "function"))); // this check if game is object or functions
+
+console.log((game !== null) && (typeof game === "object") && (toString.call(game) !== "[object Array]")); // this returns falls if the object is an Array
+
+console.log((bar !== null) && (bar.constructor === Object)); // returns false for nulls, arrays, and functions, but true for objects
+
