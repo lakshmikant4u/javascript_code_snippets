@@ -486,4 +486,8 @@ const player = {
 }
 
 const clonedPlayer = structuredClone(player) // supported Node Version
-console.log(clonedPlayer === player); // false
+// 38. operator precedence == greater than +
+
+console.log(0.1 + 0.2); // 0.30000000000000004
+console.log(0.1 + 0.2 == 0.3); // false - Expln -> 0.2 == 0.3 calculated to false and the 0.1 + false returns false
+
