@@ -519,3 +519,12 @@ console.log(isPalindrome("level"));                   // logs 'true'
 console.log(isPalindrome("levels"));                  // logs 'false'
 console.log(isPalindrome("A car, a man, a maraca"));  // logs 'true'
 
+// 41. function to add digits of a number till it becomes single digit
+
+const addDigits = (num) => {
+    let x = Array.from(String(num), Number)
+    let y = x.reduce((a, c) => a + c);
+    return y.toString().length > 1 ? addDigits(y) : y
+};
+
+console.log(addDigits(12432423));
