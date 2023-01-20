@@ -461,4 +461,17 @@ console.log((game !== null) && (typeof game === "object") && (toString.call(game
 console.log((game !== null) && (game.constructor === Object)); // returns false for nulls, arrays, and functions, but true for objects
 
 let games = ["Football", "Cricket"]
-console.log(Array.isArray(games)); // logs true ES5 isArray method to check if variable is An Array
+
+// 36. code snippet 
+
+let demo1 = () => {
+    var a = b = 3;
+};
+demo1();
+console.log("a defined? " + (typeof a !== 'undefined'));
+console.log("b defined? " + (typeof b !== 'undefined'));
+
+// var a = b = 3; is actually shorthand for: 
+// b = 3;
+// var a = b; hence 'b' becomes global variable and 'a' becomes local to demo1 method
+
