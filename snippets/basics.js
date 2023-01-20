@@ -475,3 +475,15 @@ console.log("b defined? " + (typeof b !== 'undefined'));
 // b = 3;
 // var a = b; hence 'b' becomes global variable and 'a' becomes local to demo1 method
 
+// 37. Deep Cloning Objects in JavaScript, the Modern Way - structuredClone 
+// https://simonplend.com/deep-clone-values-with-structuredclone/
+// https://www.builder.io/blog/structured-clone
+
+const player = {
+    name: "Messi",
+    game: "Football",
+    worldcup_played: [2006, 2010, 2014, 2018, 2022]
+}
+
+const clonedPlayer = structuredClone(player) // supported Node Version
+console.log(clonedPlayer === player); // false
