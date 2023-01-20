@@ -454,9 +454,11 @@ console.log(typeof game === "object");  // logs true! the surprising gotcha in J
 
 console.log((game !== null) && (typeof game === "object"));  // logs false hence can add null check to see if variable is an object!
 
-console.log((game !== null) && ((typeof game === "object") || (typeof game === "function"))); // this check if game is object or functions
+console.log((game !== null) && ((typeof game === "object") || (typeof game === "function"))); // logs false this check if game is object or functions
 
 console.log((game !== null) && (typeof game === "object") && (toString.call(game) !== "[object Array]")); // this returns falls if the object is an Array
 
-console.log((bar !== null) && (bar.constructor === Object)); // returns false for nulls, arrays, and functions, but true for objects
+console.log((game !== null) && (game.constructor === Object)); // returns false for nulls, arrays, and functions, but true for objects
 
+let games = ["Football", "Cricket"]
+console.log(Array.isArray(games)); // logs true ES5 isArray method to check if variable is An Array
