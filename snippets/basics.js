@@ -527,4 +527,17 @@ const addDigits = (num) => {
     return y.toString().length > 1 ? addDigits(y) : y
 };
 
-console.log(addDigits(12432423));
+// 42. Function rest parameter
+
+function myFunc() {
+    for (var i = 0; i < arguments.length; i++) {
+        console.log(arguments[i]);
+    }
+}
+
+myFunc("Nick", "Anderson", 10, 12, 6);
+// "Nick"
+// "Anderson"
+// 10
+// 12
+// 6
