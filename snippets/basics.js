@@ -570,3 +570,14 @@ items = [];
 console.log(items); // []
 console.log(copy); // ['tea', 'coffee', 'oranges']
 
+// a. Set length of the array to 0 to make original Array empty
+
+let colours = ["white", "blue", "red", "cream"];
+let copyColours = colours;
+
+console.log(colours); // []
+console.log(copyColours); // []
+
+colours.length = 0;
+console.log(colours); // []
+console.log(copyColours); // []
