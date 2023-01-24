@@ -612,3 +612,11 @@ let cricketPlayer = {
 
 console.log(displayPlayer.call(cricketPlayer)); // Hi Virender Sehwag	
 
+let displayPlayerFatArrow = () => {
+    return "Hi " + this.name;
+}
+
+// This doesn't work with fat arrow operator, The reason being Arrow function doesn't have 'this' of their own.
+// https://ishwar-rimal.medium.com/call-bind-and-apply-with-arrow-function-in-javascript-4e614456d5f5 
+console.log(displayPlayerFatArrow.call(cricketPlayer)); // Hi undefined	
+
