@@ -554,3 +554,19 @@ console.log(a[b]); // 456
 // In this case, since b and c are both objects, they will both be converted to "[object Object]".
 // As a result, a[b] anda[c] are both equivalent to a["[object Object]"] and can be used interchangeably.
 // Therefore, setting or referencing a[c] is precisely the same as setting or referencing a[b].
+
+// 44. Different ways to make an Array empty
+
+let items = ["tea", "coffee", "milk"];
+let copy = items;
+
+copy[2] = "oranges";
+console.log(items); // ['tea', 'coffee', 'oranges']
+console.log(copy); // ['tea', 'coffee', 'oranges']
+
+items = [];
+
+// The items array is empty but copy still contains the original array and it’s not cleared.
+console.log(items); // []
+console.log(copy); // ['tea', 'coffee', 'oranges']
+
