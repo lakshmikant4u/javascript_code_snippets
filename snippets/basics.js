@@ -597,5 +597,18 @@ let newObj = obj;
 console.log(obj); // { name: 'Lakshmikant' }
 console.log(newObj); // { name: 'Lakshmikant' }
 obj = null;
-console.log(obj); // null
-console.log(newObj); // { name: 'Lakshmikant' }
+// 46. call() method
+
+let displayPlayer = function () {
+    return "Hi " + this.name;
+}
+let cricketPlayer = {
+    name: "Virender Sehwag",
+    place: "Delhi",
+    getDetails: function (playerType) {
+        return `Cricketer is ${this.name} from ${this.place}  ${playerType ? `and he is ${playerType}` : ''}`
+    }
+};
+
+console.log(displayPlayer.call(cricketPlayer)); // Hi Virender Sehwag	
+
