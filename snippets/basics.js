@@ -620,3 +620,13 @@ let displayPlayerFatArrow = () => {
 // https://ishwar-rimal.medium.com/call-bind-and-apply-with-arrow-function-in-javascript-4e614456d5f5 
 console.log(displayPlayerFatArrow.call(cricketPlayer)); // Hi undefined	
 
+let cricketPlayer2 = {
+    name: "Rahul Dravid",
+    place: "Bengaluru"
+}
+
+// use getDetails method from cricketPlayer obj by passing cricketPlayer2 in call
+console.log(cricketPlayer.getDetails.call(cricketPlayer2)); // Cricketer is Rahul Dravid from Bengaluru
+
+// call with parameters
+console.log(cricketPlayer.getDetails.call(cricketPlayer2, "Batsman")); // Cricketer is Rahul Dravid from Bengaluru  and he is Batsman
