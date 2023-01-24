@@ -590,5 +590,12 @@ console.log(cities); // [ 'Hubli', 'Dharwad', 'Bijapur', 'Bengaluru' ]
 console.log(citiesCopy); // [ 'Hubli', 'Dharwad', 'Bijapur', 'Bengaluru' ]
 // remove elements of items array starting from position 0 till length of array
 cities.splice(0, cities.length);
-console.log(cities); // []
-console.log(citiesCopy); // []
+// 45. Object Reference
+
+let obj = { name: 'Lakshmikant' };
+let newObj = obj;
+console.log(obj); // { name: 'Lakshmikant' }
+console.log(newObj); // { name: 'Lakshmikant' }
+obj = null;
+console.log(obj); // null
+console.log(newObj); // { name: 'Lakshmikant' }
