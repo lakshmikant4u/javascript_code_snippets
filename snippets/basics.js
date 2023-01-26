@@ -635,3 +635,19 @@ console.log(cricketPlayer.getDetails.apply(cricketPlayer2, ["Batsman"])); // Cri
 
 console.log(cricketPlayer2.runsScored.apply(cricketPlayer, [3413, 3434, 1323])); // 8170
 
+// 48. bind() method
+const scientist = {
+    firstName: "Sir Chandrasekhara",
+    lastName: "Raman",
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
+}
+
+const scientist2 = {
+    firstName: "Home Jehangir",
+    lastName: "Bhabha",
+}
+console.log(scientist.fullName()) // Sir Chandrasekhara Raman
+let scientist2FN = scientist.fullName.bind(scientist2);
+console.log(scientist2FN()); // Home Jehangir Bhabha
