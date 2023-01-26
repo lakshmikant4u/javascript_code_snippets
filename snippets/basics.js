@@ -629,4 +629,9 @@ let cricketPlayer2 = {
 console.log(cricketPlayer.getDetails.call(cricketPlayer2)); // Cricketer is Rahul Dravid from Bengaluru
 
 // call with parameters
-console.log(cricketPlayer.getDetails.call(cricketPlayer2, "Batsman")); // Cricketer is Rahul Dravid from Bengaluru  and he is Batsman
+// 47. apply() method is same as call() but takes argument as Array
+
+console.log(cricketPlayer.getDetails.apply(cricketPlayer2, ["Batsman"])); // Cricketer is Rahul Dravid from Bengaluru  and he is Batsman
+
+console.log(cricketPlayer2.runsScored.apply(cricketPlayer, [3413, 3434, 1323])); // 8170
+
