@@ -651,3 +651,16 @@ const scientist2 = {
 console.log(scientist.fullName()) // Sir Chandrasekhara Raman
 let scientist2FN = scientist.fullName.bind(scientist2);
 console.log(scientist2FN()); // Home Jehangir Bhabha
+
+// 49. calback functions
+
+function sayHello(name) {
+  console.log("Hello " + name);
+}
+
+function greetPerson(callback) {
+  let name = "Lakshmikant";
+  callback(name);
+}
+
+greetPerson(sayHello);
