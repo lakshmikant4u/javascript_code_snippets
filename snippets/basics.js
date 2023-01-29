@@ -666,4 +666,16 @@ function greetPerson(callback) {
 // 50. filter with Boolean class
 
 const compact = (arr) => console.log(arr.filter(Boolean));
-compact([0, 1, false, 2, "", 3, "a", "e" * 23, NaN, "s", 34]); // [ 1, 2, 3, 'a', 's', 34 ]
+// 51. code snippet of variable hosting
+
+var temp1 = 1;
+function outer2() {
+  var temp1 = 2;
+  function inner2() {
+    temp1++;
+    var temp1 = 3;
+    console.log(temp1);
+  }
+  inner2();
+}
+outer2(); // 3
