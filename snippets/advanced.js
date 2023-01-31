@@ -36,3 +36,15 @@ console.log("4.", memoized(10));
 // 3. 85
 // long time
 // 4. 90
+
+// 2. memory leak
+// JavaScript completes garbage collection with a mark and sweep method.
+
+var person = {
+  first: "Brittney",
+  last: "Postma",
+};
+
+person = "Brittney Postma";
+
+// By changing the variable person from an object to a string, it leaves the values of first and last in the memory heap and does not remove it.
