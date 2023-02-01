@@ -48,3 +48,37 @@ var person = {
 person = "Brittney Postma";
 
 // By changing the variable person from an object to a string, it leaves the values of first and last in the memory heap and does not remove it.
+
+// 3. concurrency and the event loop
+
+console.log("1");
+// goes on call stack and runs 1
+setTimeout(() => {
+  console.log("2"), 1000;
+});
+// gets sent to web api
+// web api waits 1 sec, runs and sends to callback queue
+// the javascript engine keeps going
+console.log("3");
+// goes on call stack and runs 3
+// event loop keeps checking and see call stack is empty
+// event loop sends calback queue into call stack
+// 2 is now ran
+
+// 1
+// 3
+// 2
+
+// Example with 0 second timeout
+
+console.log("1");
+setTimeout(() => {
+  console.log("2"), 0;
+});
+console.log("3");
+
+// 1
+// 3
+// 2
+
+// Still has the same output
