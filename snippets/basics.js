@@ -679,3 +679,11 @@ function outer2() {
   inner2();
 }
 outer2(); // 3
+
+// 52. code snippet of variable hosting
+var temp2 = 21;
+var girl = function () {
+  console.log(temp2);
+  var temp2 = 20;
+};
+girl(); // undefined
