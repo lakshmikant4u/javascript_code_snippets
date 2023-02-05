@@ -701,3 +701,12 @@ setInterval(() => {
   }
 }, 200);
 
+// 54. Mutability
+
+let text = "abcde";
+text[1] = "z";
+console.log(text); //ans: abcde
+
+const arr = [1, 2, 3];
+arr.length = 0;
+console.log(arr); //ans: []
