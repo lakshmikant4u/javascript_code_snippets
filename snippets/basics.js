@@ -724,3 +724,9 @@ console.log(arr); //ans: []
 console.log(tempa); // 10
 console.log(tempc); // Uncaught ReferenceError: tempc is not defined
 
+// 56. Parameters vs Arguments?
+
+var temp_abc = function(param1, param2) { // labels/identifiers are parameters
+ console.log("temp_abc called");
+}
+temp_abc("a", "b"); // arguments - values passed inside function call
