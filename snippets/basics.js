@@ -710,3 +710,17 @@ console.log(text); //ans: abcde
 const arr = [1, 2, 3];
 arr.length = 0;
 console.log(arr); //ans: []
+
+// 55. Block Scope & Shadowing in JS
+
+{
+ var tempa = 10;
+ let tempb = 20;
+ const tempc = 30;
+ // Here let and const are hoisted in Block scope,
+ // While, var is hoisted in Global scope.
+}
+
+console.log(tempa); // 10
+console.log(tempc); // Uncaught ReferenceError: tempc is not defined
+
