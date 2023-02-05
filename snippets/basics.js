@@ -687,3 +687,17 @@ var girl = function () {
   var temp2 = 20;
 };
 girl(); // undefined
+
+// 53. code snippet of settimeout
+
+let temp3 = true;
+let count = 0;
+setTimeout(() => {
+  temp3 = false;
+}, 2000);
+setInterval(() => {
+  if (temp3) {
+    console.log(count++);
+  }
+}, 200);
+
