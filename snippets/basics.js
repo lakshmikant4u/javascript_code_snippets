@@ -729,4 +729,8 @@ console.log(tempc); // Uncaught ReferenceError: tempc is not defined
 var temp_abc = function(param1, param2) { // labels/identifiers are parameters
  console.log("temp_abc called");
 }
-temp_abc("a", "b"); // arguments - values passed inside function call
+// 57. Check if a Number is a Power of Two using bitwise '&' operator
+
+const isNumberPowerOfTwo = number => !!number && (number & (number -1)) == 0;
+console.log(isNumberPowerOfTwo(5)); // false
+console.log(isNumberPowerOfTwo(32)); // true
