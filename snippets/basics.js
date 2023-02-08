@@ -736,5 +736,7 @@ const isNumberPowerOfTwo = number => !!number && (number & (number -1)) == 0;
 
 const allEqual = arr => arr.every(val => val === arr[0]);
 
-console.log(allEqual([1, 2, 3, 4, 5, 6])); // false
-console.log(allEqual([1, 1, 1, 1])); // true
+// 59. count occurrences of a value in an Array
+const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
+console.log(countOccurrences([1, 1, 2, 1, 2, 3], 2)); // 2
+
