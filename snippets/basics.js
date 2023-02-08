@@ -732,5 +732,9 @@ var temp_abc = function(param1, param2) { // labels/identifiers are parameters
 // 57. Check if a Number is a Power of Two using bitwise '&' operator
 
 const isNumberPowerOfTwo = number => !!number && (number & (number -1)) == 0;
-console.log(isNumberPowerOfTwo(5)); // false
-console.log(isNumberPowerOfTwo(32)); // true
+// 58. snippet to check if all the elements are equal
+
+const allEqual = arr => arr.every(val => val === arr[0]);
+
+console.log(allEqual([1, 2, 3, 4, 5, 6])); // false
+console.log(allEqual([1, 1, 1, 1])); // true
