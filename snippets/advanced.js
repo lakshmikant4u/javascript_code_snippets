@@ -108,3 +108,50 @@ console.log("3", "is a crowd");
 // undefined Promise resolved
 // 1 is the loneliest number
 // 2 can be as bad as one
+
+// 5. Data Structure
+// Queue
+
+function Stack() {
+
+  this.items = [];
+
+  this.push = function (item) {
+    this.items.unshift(item);
+  }
+  this.pop = function (item) {
+    return this.items.shift();
+  }
+
+  this.peek = function () {
+    return this.items[0];
+  }
+
+  this.isEmpty = function () {
+    return this.items.length === 0;
+  }
+
+  this.printStack = function () {
+    if (this.items.length == 0) {
+      console.log("The Stack is Empty");
+      return;
+    }
+    this.items.forEach(item => console.log(item));
+  }
+}
+
+const stack = new Stack();
+
+stack.push('Cricket');
+stack.push('Hockey');
+stack.push('Swimming');
+
+stack.isEmpty();
+
+stack.peek();
+stack.printStack();
+stack.pop();
+stack.pop();
+stack.pop();
+
+stack.printStack();
