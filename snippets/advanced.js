@@ -110,7 +110,7 @@ console.log("3", "is a crowd");
 // 2 can be as bad as one
 
 // 5. Data Structure
-// Queue
+// Stack
 
 function Stack() {
 
@@ -155,3 +155,23 @@ stack.pop();
 stack.pop();
 
 stack.printStack();
+
+// 6. Promise
+
+var promise = new Promise((resolve, reject) => {
+  const expectedSalary = 750000;
+  const maximum = 1000000;
+  if (expectedSalary <= maximum) {
+    resolve();
+  } else {
+    reject();
+  }
+});
+
+promise.
+  then(() => {
+    console.log('Roll out the offer');
+  }).
+  catch(() => {
+    console.log('Out of our budget.!');
+  });
