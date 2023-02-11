@@ -175,3 +175,21 @@ promise.
   catch(() => {
     console.log('Out of our budget.!');
   });
+
+// 7. Promise.allsettled
+const report1 = Promise.resolve('report generated');
+const report2 = Promise.reject('report failed to generate');
+const reportList = [report1, report2];
+
+const generateReports = async list => {
+  const reportData = await Promise.allSettled(list);
+  console.log(reportData);
+  return reportData;
+}
+console.log(generateReports(reportList));
+
+/* prints: [
+{ status: 'fulfilled', value: 'report generated' },
+{ status: 'rejected', reason: 'report failed to generate' }
+] 
+*/
