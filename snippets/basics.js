@@ -737,6 +737,15 @@ const isNumberPowerOfTwo = number => !!number && (number & (number -1)) == 0;
 const allEqual = arr => arr.every(val => val === arr[0]);
 
 // 59. count occurrences of a value in an Array
-const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
-console.log(countOccurrences([1, 1, 2, 1, 2, 3], 2)); // 2
+// 60. Sleep Sort
+// Actually, this snippet is not always guaranteed to work and scale. 
+// It might work (or not work) because of the asynchronous nature of JavaScript 
+// and how the event loop works in JavaScript.
 
+const numbers5 = [1, 23, 35, 80, 11, 99, 45]
+
+numbers5.forEach((number) => setTimeout(() =>
+  console.log(number), number)
+)
+
+// 1 11 23 35 45 80 99
