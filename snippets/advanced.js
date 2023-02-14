@@ -204,3 +204,18 @@ console.log(generateReports(reportList));
 })();
 
 // 1, 5, 4, 3 , 2
+// 9. A random number(float) Generator between min (inclusive) and max (exclusive) 
+
+const getRandomNumber = (min, max) => Math.random() * (max - min) + min;
+
+console.log(getRandomNumber(2, 10));
+
+// A random number(int) Generator between min (inclusive) and max (inclusive)
+
+const getRandomNumberInclusive = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log(getRandomNumberInclusive(2, 10));
