@@ -193,3 +193,14 @@ console.log(generateReports(reportList));
 { status: 'rejected', reason: 'report failed to generate' }
 ] 
 */
+// 8. code snippet with promise and timeout
+
+(function () {
+  console.log(1);
+  setTimeout(() => console.log(2), 1000);
+  setTimeout(() => console.log(3), 0);
+  Promise.resolve(true).then(() => console.log(4));
+  console.log(5);
+})();
+
+// 1, 5, 4, 3 , 2
