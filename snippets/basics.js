@@ -749,3 +749,15 @@ numbers5.forEach((number) => setTimeout(() =>
 )
 
 // 1 11 23 35 45 80 99
+// 61. Sort an array
+
+//Strings
+const strArr = ["Lakshmikant", "Sachin", "Guru", "Nirmal"];
+strArr.sort();
+console.log(strArr); // [ 'Guru', 'Lakshmikant', 'Nirmal', 'Sachin' ]
+//Numbers
+const numbersArr = [25, 42, 12, 32];
+numbersArr.sort((a, b) => {
+  return a - b;
+});
+console.log(numbersArr); // [ 12, 25, 32, 42 ]
