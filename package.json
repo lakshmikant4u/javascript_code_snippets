@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "play_rxjs": "nodemon ./snippets/rxjs_in_details/rxjs_examples.js"
+  },
+  "dependencies": {
+    "rxjs": "^7.8.0"
+  },
+  "type": "module"
+}
