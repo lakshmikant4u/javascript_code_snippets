@@ -36,5 +36,31 @@ from(array2).subscribe({
 // 2. of operator
 import { of } from 'rxjs';
 
-of(1, 2, 3, 4)
-    .subscribe(val => console.log(val)); // 1, 2, 3, 4
+// 3. Observables are lazy Push collections of multiple values.
+
+import { Observable } from 'rxjs';
+
+const observable = new Observable((subscriber) => {
+    subscriber.next(1);
+    subscriber.next(2);
+    subscriber.next(3);
+    setTimeout(() => {
+        subscriber.next(4);
+        subscriber.complete();
+    }, 1000);
+});
+
+console.log('just before subscribe');
+observable.subscribe({
+    next(x) {
+        console.log('got value ' + x);
+    },
+    error(err) {
+        console.error('something wrong occurred: ' + err);
+    },
+    complete() {
+        console.log('done');
+    },
+});
+console.log('just after subscribe');
+
