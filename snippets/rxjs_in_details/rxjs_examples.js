@@ -31,3 +31,10 @@ from(array2).subscribe({
     complete: console.info,
     error: console.error
 });
+// 1, 2, 3
+
+// 2. of operator
+import { of } from 'rxjs';
+
+of(1, 2, 3, 4)
+    .subscribe(val => console.log(val)); // 1, 2, 3, 4
