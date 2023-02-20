@@ -761,3 +761,12 @@ numbersArr.sort((a, b) => {
   return a - b;
 });
 console.log(numbersArr); // [ 12, 25, 32, 42 ]
+
+// 62. Add property to functions (A function is a special type of object.)
+
+function play(game) {
+  console.log(`${game} is being Played!`);
+}
+
+play.type = 'Sports'; // No error as functions are Objects in JS
+
