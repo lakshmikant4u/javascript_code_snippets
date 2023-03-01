@@ -219,3 +219,30 @@ const getRandomNumberInclusive = (min, max) => {
 }
 
 console.log(getRandomNumberInclusive(2, 10));
+
+// 10. Array performance optimisation using performance lib
+
+const arr = [];
+for (let i = 0; i < 60000000; i++) {
+  arr.push(i);
+}
+
+function withFrom(arr) {
+  const t1 = performance.now();
+  const newArr = Array.from(arr, (x) => x * x);
+  const t2 = performance.now();
+  console.log("with from: ", t2 - t1);
+  return newArr;
+}
+
+function withMap(arr) {
+  const t1 = performance.now();
+  const newArr = arr.map(x => x * x);
+  const t2 = performance.now();
+  console.log("with map: ", t2 - t1);
+  return newArr;
+}
+withMap(arr); // with map:  8117.494208998978
+withFrom(arr); // with from:  1853.9403750002384
+
+
