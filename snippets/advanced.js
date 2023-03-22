@@ -242,7 +242,20 @@ function withMap(arr) {
   console.log("with map: ", t2 - t1);
   return newArr;
 }
-withMap(arr); // with map:  8117.494208998978
-withFrom(arr); // with from:  1853.9403750002384
+// 11. Attempts to invoke a function with the provided arguments, 
+// returning either the result or the caught error object.
 
+const attempt = (fn, ...args) => {
+  try {
+    return fn(...args);
+  } catch (e) {
+    return e instanceof Error ? e : new Error(e);
+  }
+};
 
+var elements = attempt(function (selector) {
+  return document.querySelectorAll(selector);
+}, '>_>');
+if (elements instanceof Error) elements = [];
+
+console.log(elements); // elements = [];
