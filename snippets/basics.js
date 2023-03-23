@@ -770,3 +770,7 @@ function play(game) {
 
 play.type = 'Sports'; // No error as functions are Objects in JS
 
+// 63. Comparison
+
+console.log(3 > 2 > 1) // false
+
