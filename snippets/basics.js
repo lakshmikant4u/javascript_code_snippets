@@ -663,6 +663,19 @@ function greetPerson(callback) {
   callback(name);
 }
 
+// call back example 2
+function add(a, b, callback) {
+  const result = a + b;
+
+  // call the callback function with the result
+  callback(result);
+}
+
+// example usage
+add(2, 3, function (result) {
+  console.log(`The result is ${result}.`);
+});
+
 // 50. filter with Boolean class
 
 const compact = (arr) => console.log(arr.filter(Boolean));
