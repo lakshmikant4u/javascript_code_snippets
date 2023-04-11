@@ -663,6 +663,8 @@ function greetPerson(callback) {
   callback(name);
 }
 
+greetPerson(sayHello);
+
 // call back example 2
 function add(a, b, callback) {
   const result = a + b;
