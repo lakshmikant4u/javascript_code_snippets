@@ -36,6 +36,7 @@ from(array2).subscribe({
 // 2. of operator
 import { of } from 'rxjs';
 
+
 // 3. Observables are lazy Push collections of multiple values.
 
 import { Observable } from 'rxjs';
